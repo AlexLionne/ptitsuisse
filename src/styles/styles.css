@@ -1,0 +1,224 @@
+/*Cards*/
+html,body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+#root{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.grid{
+    text-align: center;
+}
+.route_container{
+    height: 100%;
+}
+h1{
+    font-family: 'Racing Sans One', cursive!important;
+}
+.app{
+    padding: 64px;
+    height: 100vh;
+    background-size: cover;
+    z-index: 0;
+}
+.app_image{
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    background: url("../assets/header.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+@media only screen and (max-width: 768px) {
+    .app{
+        padding: 24px;
+    }
+    .driver_image_container{
+        display: none!important;
+    }
+}
+
+
+
+
+.card_link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left:0;
+    z-index: 3;
+}
+
+
+.card{
+    top: 150px;
+    opacity: 0;
+    padding: 3px;
+    position: relative;
+    min-height: 300px;
+    height: 300px;
+    min-width: 200px;
+    margin: 0;
+    width: 100%;
+    border-radius: 6px;
+    text-align: center;
+    background-size: cover;
+    background: white no-repeat;
+}
+
+.card:hover{
+    z-index: 100;
+    position: relative;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border: 4px solid red;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+}
+
+.card_image{
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+}
+
+.card_text{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: 3px;
+    font-size: 150%;
+    left: 3px;
+    right: 3px;
+    font-weight: 500;
+    font-family: 'Anton', sans-serif;
+    color: black;
+    padding: 24px;
+    z-index: 4;
+}
+
+.card_sub_text{
+    font-size: 90%;
+}
+
+
+/*grid*/
+.ui.grid>.column:not(.row){
+    padding: 4px!important;
+}
+.blue{
+    background-color: dodgerblue;
+}
+.red{
+    background-color: darkred;
+}
+.orange{
+    background-color: coral;
+}
+
+.driver_page{
+    top: 30px;
+    position: relative;
+    width: 100%;
+}
+.right{
+    float: right;
+    display: inline;
+}
+
+.left{
+    font-weight: 800;
+}
+.driver_license{
+    text-align: left;
+    color:black;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+}
+.driver_license ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.driver_license ul li{
+    padding: 20px;
+    height: 100%;
+}
+.driver_license ul li:not(:first-child):hover{
+    background-color: red;
+    color: white;
+}
+.driver_license ul li:first-child{
+   color: red;
+}
+.driver_license ul p{
+   display: inline;
+    font-size: 100%;
+}
+
+.divider_white{
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+
+.driver{
+    text-align: center;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+
+}
+.driver_image{
+    width: 100%;
+    margin-bottom: -4px;
+}
+.driver_text{
+    z-index: 2;
+    background-color: white;
+    text-align: center;
+    padding: 24px;
+    color: black;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+}
+.flag{
+    display: inline;
+    margin-right:8px ;
+}
+.driver_num{
+    font-size: 600%;
+    margin: 0;
+    font-family: 'Racing Sans One', cursive;
+}
+
+.grid{
+    height: auto!important;
+}
+.column{
+    height: auto!important;
+}
+
+.disabled{
+    filter: grayscale(100%);
+}
+.locked{
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin: auto;
+}

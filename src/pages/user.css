@@ -1,0 +1,30 @@
+.btn_container{
+    position: absolute;
+   height: 30px;
+    left: 58px;
+    top: 24px;
+    width: 200px;
+    margin: auto;
+    border-radius: 30px;
+    border: 2px solid red;
+}
+
+._left{
+    vertical-align: baseline;
+    color:white;
+    padding-left: 10px;
+    padding-top: 2px;
+    height: 26px;
+    float: left;
+    background-color: red;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 100px;
+}
+._right{
+float: right;
+    padding-top: 2px;
+    padding-right: 13px;
+    color: white;
+
+}

@@ -1,26 +1,52 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/styles.css';
+import header from './assets/header.jpg'
+import 'semantic-ui-css/semantic.min.css'
+
+
+import posed, {PoseGroup} from 'react-pose';
+import Home from "./pages/Home";
+import {Route, Switch} from "react-router-dom";
+import Presentation from "./pages/Presentation";
+import User from "./pages/User";
+
+
+const RouteContainer = posed.div({
+    enter: { opacity: 1, delay: 300, height:'100%!important',beforeChildren: true },
+    exit: { opacity: 0, delay: 300, height:'100%!important',beforeChildren: false }
+});
+
 
 class App extends Component {
-  render() {
+
+
+    componentDidMount() {
+        setTimeout(this.toggle, 1000);
+    }
+
+
+    render() {
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <Route
+            render={({ location }) => (
+                <div>
+                    <img className={'app_image'} src={header}/>
+                    <User/>
+                <div className={'app'}>
+
+                    <PoseGroup>
+                        <RouteContainer className={'route_container'} key={location.pathname}>
+                            <Switch location={location}>
+                                <Route exact path="/" render={()=><Home/>} key="home" />
+                                <Route exact path="/presentation" render={()=><Presentation/>} key="presentation" />
+                            </Switch>
+                        </RouteContainer>
+                    </PoseGroup>
+                </div>
+                </div>
+            )}/>
+
     );
   }
 }
